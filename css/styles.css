@@ -8,6 +8,7 @@
   --primary-background-color: #f5f5f5;
   --logo-black-color: #000;
   --border-color: #eeeeee;
+  --icon-color: #AFB1B8;
 }
 h1,
 h2,
@@ -122,7 +123,13 @@ li {
 .header-contakt-tel:focus {
   color: var(--accent-color);
 }
-
+.icon-tel,
+.icon-mail {
+    margin-right: 10px;
+      fill: currentColor;
+      margin-top: auto;
+      margin-bottom: auto;
+}
 /* Раскраска секций (первая секция или единственная на листе - то белая) */
 .section-one {
   background-color: #ffffff;
@@ -141,10 +148,16 @@ li {
 /* Герой */
 .hero {
   background-color: var(--hero-background-color);
-  color: var(--primary-white-color);
+  background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+color: var(--primary-white-color);
+background-size: cover;
+background-position: center;
   padding-top: 200px;
   padding-bottom: 30px;
   text-align: center;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Кнопка героя*/
@@ -181,7 +194,7 @@ li {
 
 .list-sec {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 30px;
 }
 /* Заголовки */
@@ -196,9 +209,53 @@ li {
   margin-bottom: 10px;
   width: 270px;
 }
-/* .list-head {
-  margin-right: 30px;
-} */
+.list-sec .list-head {
+  width: 270px;
+
+}
+
+.list-icon {
+  display: flex;
+  content: "";
+  height: 120px;
+  background-position: center;
+  background-color: var(--button-background-color);
+  border-radius: 4px;
+  align-items: center;
+  margin-bottom: 30px;
+
+}
+.client-list {
+    display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+}
+.client-icon-list {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+}
+
+.client-icon {
+    display: flex;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-color: var(--primary-white-color)
+      border-radius: 4px;
+      align-items: center;
+      fill: var(--icon-color);
+      cursor: pointer;
+}
+
+.client-icon:hover, 
+.client-icon:focus  {
+     fill: var(--accent-color);
+     border: 1px solid var(--accent-color);
+}
+
 
 /* Подписи под заголовками */
 .list-text {
@@ -274,6 +331,38 @@ li {
   flex-wrap: nowrap;
   gap: 30px;
 }
+
+/* Кнопки на карточках Наша Команда */
+.team-social {
+  width: 270px;
+  display: flex;
+  flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    justify-content: stretch;
+}
+
+.icon-linc {
+  border: 1px solid #AFB1B8;
+  border-radius: 100%;
+  display: flex;
+  content: "";
+  background-position: center;
+  background-color: var(--primary-white-color) border-radius: 4px;
+  align-items: center;
+  fill: var(--icon-color);
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+}
+
+
+
+
+
+
+
 /*-- Футер -- */
 .footer {
   background-color: var(--hero-background-color);
