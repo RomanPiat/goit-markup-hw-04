@@ -133,8 +133,7 @@ li {
     color: var(--accent-color);
 }
 
-.icon-tel,
-.icon-mail {
+.icon-telmail {
     margin-right: 10px;
     padding: 0;
 }
@@ -157,9 +156,9 @@ li {
 .hero {
   background-color: var(--hero-background-color);
   background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
-color: var(--primary-white-color);
-background-size: cover;
-background-position: center;
+  color: var(--primary-white-color);
+  background-size: cover;
+  background-position: center;
   padding-top: 200px;
   padding-bottom: 30px;
   text-align: center;
@@ -205,6 +204,7 @@ background-position: center;
   flex-wrap: wrap;
   gap: 30px;
 }
+
 /* Заголовки */
 .list-header {
   color: var(--head-text-color);
@@ -217,39 +217,54 @@ background-position: center;
   margin-bottom: 10px;
   width: 270px;
 }
+
 .list-sec .list-head {
   width: 270px;
-
 }
 
 .list-icon {
   display: flex;
-  content: "";
   height: 120px;
-  background-position: center;
   background-color: var(--button-background-color);
   border-radius: 4px;
   align-items: center;
   margin-bottom: 30px;
-
 }
+
 .client-list {
     display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+padding-left: 0;
+justify-content: center;
 }
-.client-icon-list {
-  width: 170px;
-  height: 92px;
-  border: 1px solid var(--icon-color);
-  border-radius: 4px;
+.client-list .client-icon-list {
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      width: 170px;
+      height: 92px;
+      border: 1px solid #AFB1B8;
+      box-sizing: border-box;
+      border-radius: 4px;
+      background-repeat: no-repeat;
+      background-position: center;
 }
 
-.client-icon {
-    display: flex;
+.client-logo {
+  width: 106px;
+  height: 60px;
+  fill: var(--icon-color);
+  border: 1px solid transparent;
+}
+
+.client-icon-list {
+    display: block;
       content: "";
-      width: 100%;
-      height: 100%;
+      width: 170%;
+      height: 92%; 
+      padding: 16px 32px;
       background-position: center;
       background-color: var(--primary-white-color)
       border-radius: 4px;
@@ -258,11 +273,15 @@ background-position: center;
       cursor: pointer;
 }
 
-.client-icon:hover, 
-.client-icon:focus  {
-     fill: var(--accent-color);
-     border: 1px solid var(--accent-color);
-     border-radius: 4px;
+.client-icon-list:hover .client-logo,
+.client-icon-list:focus .client-logo {
+        color: var(--accent-color);
+        fill: var(--accent-color);
+}
+
+.client-icon-list:hover,
+.client-icon-list:focus {
+        border: 1px solid var(--accent-color);
 }
 
 
@@ -355,19 +374,15 @@ background-position: center;
   border-radius: 100%;
   display: flex;
   content: "";
-  background-position: center;
-  background-color: var(--primary-white-color) border-radius: 4px;
-  align-items: center;
   fill: var(--icon-color);
-  cursor: pointer;
   width: 44px;
   height: 44px;
   padding: 12px;
+  align-items: center;
 }
 
 .icon-linc:hover,
 .icon-linc:focus {
-background-color: var(--accent-color);
 fill: var(--primary-white-color);
 cursor: pointer;
 }
@@ -385,6 +400,7 @@ cursor: pointer;
   padding-bottom: 60px;
   display: flex ;
 }
+
 .logo-header {
   color: var(--accent-color);
   font-family: "Raleway", sans-serif;
@@ -394,6 +410,7 @@ cursor: pointer;
   padding-bottom: 20px;
   margin-right: 93px;
 }
+
 .logo-white {
   color: var(--primary-white-color);
 }
@@ -411,18 +428,11 @@ cursor: pointer;
   letter-spacing: 0.03em;
   font-style: normal;
 }
-.address-list-mail {
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  font-style: normal;
-}
 .footer-mail {
   margin-bottom: 9px;
 }
-.address-list-tel {
+
+.address-list-telmail {
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
   font-size: 14px;
@@ -459,6 +469,10 @@ cursor: pointer;
     margin-top: 12px;
 }
 
+.footer-social>.team-social>.icon-linc {
+  fill: var(--primary-white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 .team-social>.icon-linc:hover,
 .team-social>.icon-linc:focus {
@@ -488,11 +502,13 @@ cursor: pointer;
               0px 1px 1px rgba(0, 0, 0, 0.14),
               0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
 .radiobutton {
   display: flex;
   gap: 8px;
   justify-content: center;
 }
+
 .portfolio-list-title {
   color: var(--head-text-color);
   font-weight: 700;
@@ -502,6 +518,7 @@ cursor: pointer;
   letter-spacing: 0.06em;
   padding-bottom: 4px;
 }
+
 .portfolio-list-text {
   color: var(--portfolio-text-color);
   font-size: 16px;
@@ -509,12 +526,14 @@ cursor: pointer;
   text-align: left;
   letter-spacing: 0.03em;
 }
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   padding-top: 50px;
 }
+
 .portfolio-item {
   display: block;
 }
