@@ -98,7 +98,7 @@ li {
   display: flex;
   align-items: center;
 }
-.header-contakt {
+.header-contact {
   display: flex;
   align-items: center;
   margin-left: auto;
@@ -108,8 +108,8 @@ li {
   margin-right: 30px;
 }
 
-.header-contakt-mail,
-.header-contakt-tel {
+.header-contact-mail,
+.header-contact-tel {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -120,11 +120,11 @@ li {
 }
 
 .header-nav-link:hover,
-.header-contakt-mail:hover,
-.header-contakt-tel:hover,
+.header-contact-mail:hover,
+.header-contact-tel:hover,
 .header-nav-link:focus,
-.header-contakt-mail:focus,
-.header-contakt-tel:focus {
+.header-contact-mail:focus,
+.header-contact-tel:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -136,20 +136,21 @@ li {
 .icon-telmail {
     margin-right: 10px;
     padding: 0;
+        vertical-align: middle;
 }
 /* Раскраска секций (первая секция или единственная на листе - то белая) */
 .section-one {
-  background-color: #ffffff;
+  background-color: var(--primary-white-color);
 }
 .section:nth-child(2n + 1) {
-  background-color: #ffffff;
+  background-color: var(--primary-white-color);
 }
 .section:nth-child(2n) {
-  background-color: #f5f5f5;
+  background-color: var(--primary-background-color);
 }
 
 .section:only-child {
-  background-color: #ffffff;
+  background-color: var(--primary-white-color);
 }
 
 /* Герой */
@@ -245,7 +246,7 @@ justify-content: center;
       cursor: pointer;
       width: 170px;
       height: 92px;
-      border: 1px solid #AFB1B8;
+      border: 1px solid var(--icon-color);
       box-sizing: border-box;
       border-radius: 4px;
       background-repeat: no-repeat;
@@ -365,15 +366,14 @@ justify-content: center;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-    gap: 10px;
+  gap: 10px;
   padding-bottom: 30px;
-    justify-content: center;
+  justify-content: center;
 }
 
 .icon-linc {
   border-radius: 100%;
   display: flex;
-  content: "";
   fill: var(--icon-color);
   width: 44px;
   height: 44px;
@@ -386,7 +386,6 @@ justify-content: center;
 fill: var(--primary-white-color);
 cursor: pointer;
 }
-
 
 /*-- Футер -- */
 .footer {
